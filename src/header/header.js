@@ -1,5 +1,6 @@
-import "./header.scss"
+
 import { peticion1,peticion2, peticionRandom } from "../components/funciones"
+
 
 
 const header= document.querySelector("header")

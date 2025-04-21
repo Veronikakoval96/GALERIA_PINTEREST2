@@ -1,5 +1,7 @@
-import "./body.scss"
+
+
 import { peticionRandom} from "../components/funciones"
+
 
 
 
