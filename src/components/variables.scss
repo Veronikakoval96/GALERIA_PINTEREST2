@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+$negro: #000000;
+$gris: #ECECEC;
+$tipografiaBase: "Inter", sans-serif;
+
+@mixin button_style($size, $color, $backcolor, $heigth, $width){
+border-style: none;
+border-radius: 30px;
+font-size:$size;
+font-weight: 200;
+color: $color;
+height: $heigth;
+width: $width;
+background-color: $backcolor;
+}
+

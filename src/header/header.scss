@@ -1,0 +1,120 @@
+ @import "../components/variables.scss";
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+.header{
+width:100%;
+height:40px;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+padding: 10px;
+align-items: center;
+margin-bottom: 10px;
+margin-top: 5px;
+margin-right: 4px;
+
+
+.nav{
+    width: 60%;
+background-color: $gris;
+height: 25px;
+border-style: none ;
+border-radius:30px ;
+display: flex;
+
+
+.buscador{
+    border-style: none;
+    padding-left: 8px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+
+
+  input{
+    background-color: $gris;
+    border-style: none;
+    width: 100%;
+    border-radius: 30px;
+    padding-left: 8px;
+    
+}  
+
+img{
+    height: 16px;
+    width: 16px;
+    border-style: none;
+    
+}
+}
+
+
+
+
+
+.opciones{
+display: flex;
+width: 10%;
+justify-content: space-between;
+margin: 4px;
+
+
+.elemento{
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+
+
+}
+
+.logo{
+    width: 30px;
+    height: 30px;
+    ;
+    
+}
+
+.logoButton{
+    border-style: none;
+    background-color: #fff;
+    cursor: pointer
+}
+
+}
+
+
+.botones{
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+
+    .boton{
+        @include button_style(14px, black, #fff, 30px, 70px);
+        &:hover{
+            background-color:$negro;
+            color: rgb(255, 255, 255);
+        }
+        cursor: pointer;
+    }
+
+}
+
+@media (max-width: 600px){
+  .botones{
+    display: none;
+  }  
+  .mensaje{
+    display:none;
+  }
+  .timbre{
+    display:none;
+  }
+}

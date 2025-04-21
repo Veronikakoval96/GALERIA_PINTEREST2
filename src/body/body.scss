@@ -1,0 +1,161 @@
+@import "../components/variables.scss";
+
+*{
+    margin:0;
+    padding: 0;
+    font-family: $tipografiaBase;
+}
+
+
+.galeria{
+    columns: 5;
+    gap:10px;
+    margin: 0, 30px, 30px,30px;
+    
+    
+    .tarjeta{
+        display: flex;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        break-inside: avoid;
+        position: relative;
+         
+
+        .hover{
+            display: flex;
+            position: relative;
+            width: 100%;
+            
+
+        .superposicion{
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            justify-content: center;
+            align-items: center;
+            
+            
+
+            
+        }
+
+        .dobleBoton{
+            width: 100%;
+            display: flex;
+            position: absolute;
+            justify-content: space-between;
+            top: 4px;
+            padding-left: 6px;  
+            padding-right: 6px;
+            opacity: 0;
+            
+            
+            
+            .boton1{
+                @include button_style(12px, #fff, $gris, 40px, 40px);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                cursor: pointer;
+                padding-bottom: 4px;
+                
+                 .corazon{
+                    transform: scale(0.7);
+                 }
+                  .camara{
+                    transform: scale(0.8);
+            
+                  }  
+
+                 }
+                 p{
+                    color:black;
+                    font-weight: 500;
+                    font-size: 8px;
+                 }
+
+            }
+            
+        }
+
+
+
+
+        .boton{
+            @include button_style(14px, #fff, rgb(161, 39, 39), 40px, 90px);
+            cursor: pointer;
+            
+        }
+
+        &:hover .superposicion,
+        &:hover .dobleBoton{
+            opacity: 1;
+            
+            
+            }
+            
+        }
+}
+        .nombre{
+            font-size: 12px;
+            margin: 2px;
+            text-align: center;
+            position: relative;
+            bottom: 25px;
+        }
+
+        .fecha{
+            font-size: 10px;
+            text-align: center;
+            position: relative;
+            bottom: 15px;
+        }
+
+
+    .imagen{
+        width: 100%;
+        border-style: none;
+        border-radius: 20px;
+        height: auto;
+        object-fit: cover;
+        margin-bottom: 10px;
+        &:hover{
+            filter: brightness(40%);
+        }
+        
+        
+
+    }
+
+    .autor{
+        width: 30%;
+        height: 30%;
+        border-style: solid;
+        border-width: 2px;
+        border-color: $negro;
+        border-radius: 50%;
+        position: relative;
+        bottom: 35px;
+        box-shadow:0px 0px 14px -1px rgba(0,0,0,0.75) ;
+        &:hover {
+            width: 35%;
+        }
+    }
+
+
+@media (max-width: 600px){
+    .galeria{
+        columns: 2;
+       
+}
+}
+    
+     
+    
+
+
